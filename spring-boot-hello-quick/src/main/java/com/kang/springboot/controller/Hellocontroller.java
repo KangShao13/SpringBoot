@@ -17,5 +17,10 @@ public class Hellocontroller {
 
         return "dsdsdsd";
     }
+    @RequestMapping("/ceshi")
+    public String gittest(){
+
+        return "git的使用";
+    }
 }
 
