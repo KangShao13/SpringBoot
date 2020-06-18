@@ -19,7 +19,7 @@ public class Hellocontroller {
     }
     @RequestMapping("/ceshi")
     public String gittest(){
-        //测试代码冲突
+        //3333
         return "git的使用";
     }
 }
