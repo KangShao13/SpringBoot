@@ -11,6 +11,7 @@ public class TestController {
     @ResponseBody
     public String sayhello(){
 
+        System.out.println();
         return "hello 80!!!";
     }
 
