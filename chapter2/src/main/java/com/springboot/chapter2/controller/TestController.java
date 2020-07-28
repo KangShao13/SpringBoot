@@ -14,5 +14,10 @@ public class TestController {
         return "hello 80!!!";
     }
 
+    @RequestMapping("/index")
+    public String toindex(){
+
+        return "index";
+    }
 
 }
