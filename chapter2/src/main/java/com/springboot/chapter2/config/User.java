@@ -1,35 +1,42 @@
 package com.springboot.chapter2.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-@Component("user")
-public class User {
-     @Value("1")
-    private Long id;
-    @Value("1l")
-    private String userName;
-    @Value("1l")
-    private String note ;
+import javax.annotation.Resource;
 
-    public Long getId() {
+
+
+@Component
+@ConfigurationProperties(prefix = "user")
+public class User {
+
+    private static int id;
+
+    private static  String username;
+
+    private static  String note ;
+
+    public int getId() {
         return id;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getNote() {
         return note;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public void setNote(String note) {
@@ -40,7 +47,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
+                ", username='" + username + '\'' +
                 ", note='" + note + '\'' +
                 '}';
     }
