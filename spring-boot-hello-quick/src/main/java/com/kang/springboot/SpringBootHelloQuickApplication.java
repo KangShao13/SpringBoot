@@ -8,6 +8,7 @@ public class SpringBootHelloQuickApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootHelloQuickApplication.class, args);
+        System.out.println("(⁎⁍̴̛ᴗ⁍̴̛⁎) 启动成功！！！(⁎⁍̴̛ᴗ⁍̴̛⁎)");
     }
 
 }
